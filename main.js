@@ -1,5 +1,5 @@
-function playSongPom(){
-  document.querySelector('#som_tecla_pom').play();
+function playSong(keyElementAudio){
+  document.querySelector(keyElementAudio).play();
 }
 
 const keyList = document.querySelectorAll('.tecla');
@@ -7,7 +7,7 @@ const keyList = document.querySelectorAll('.tecla');
 let counter = 0;
 
 while (counter < keyList.length) {
-  keyList[counter].onclick=playSongPom;
+  keyList[counter].onclick=playSong;
 
   counter = counter + 1;
 
