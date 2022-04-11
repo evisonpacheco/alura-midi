@@ -1,17 +1,14 @@
-function playSong(keyElementAudio){
-  document.querySelector(keyElementAudio).play();
+function playSong(idElementAudio){
+  document.querySelector(idElementAudio).play();
 }
 
 const keyList = document.querySelectorAll('.tecla');
 
-let counter = 0;
-
-while (counter < keyList.length) {
+for (let counter = 0; counter < keyList.length; counter++) {
   
   const key = keyList[counter];
   const instrumentSong = key.classList[1];
-  const idSong = `#som_${instrumentSong}`;
+  const idSong = `#som_${ instrumentSong }`;
 
-  key.onclick = () => {playSong(idSong);}
-  counter++;
+  key.onclick = () => { playSong(idSong) };
 }
